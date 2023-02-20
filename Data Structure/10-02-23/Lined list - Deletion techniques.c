@@ -1,3 +1,5 @@
+//Program for deletion of element in linked list
+
 #include <stdio.h>
 #include <stdlib.h>
 
@@ -7,6 +9,7 @@ struct node
   struct node *next;
 };
 
+//traversal in linked list
 void
 traversal (struct node *ptr)
 {
@@ -17,6 +20,7 @@ traversal (struct node *ptr)
     }
 }
 
+//deletion of element in linked list
 struct node *
 del (struct node *head)
 {
@@ -27,6 +31,7 @@ del (struct node *head)
   return head;
 }
 
+//deletion of element at an index
 struct node *
 delete (struct node *head, int index)
 {
@@ -42,6 +47,7 @@ delete (struct node *head, int index)
   return head;
 }
 
+//deletion at end of linked list
 struct node *
 deleteatlast (struct node *head)
 {
@@ -57,6 +63,7 @@ deleteatlast (struct node *head)
   return head;
 }
 
+//deleting value of linked list
 struct node *
 deleteval (struct node *head, int value)
 {
