@@ -1,5 +1,8 @@
+//Program to perform linear and binary search in an array
+
 #include <stdio.h>
 
+//code for traversal
 int
 traversal (int arr[], int n)
 {
@@ -9,6 +12,7 @@ traversal (int arr[], int n)
     }
 }
 
+//code for linear search in an array
 int
 linear (int arr[], int size, int element)
 {
@@ -22,6 +26,7 @@ linear (int arr[], int size, int element)
   return -1;
 }
 
+//code for binary search in an array
 int
 binary (int arr[], int size, int element)
 {
@@ -49,7 +54,7 @@ main ()
   traversal (arr, size);
   printf ("\n");
   printf ("element %d is at position %d", element,
-	  binary (arr, size, element));
+	  binary (arr, size, element));//printing element with position
 
   return 0;
 }
