@@ -1,3 +1,5 @@
+//Program for push and pop operation on stack
+
 #include <stdio.h>
 #include <stdlib.h>
 
@@ -8,6 +10,7 @@ struct stack
   int size;
 };
 
+//function to check if stack is empty or not
 int
 isEmpty (struct stack *ptr)
 {
@@ -21,6 +24,7 @@ isEmpty (struct stack *ptr)
     }
 }
 
+//function to check if stack is full or not
 int
 isFull (struct stack *ptr)
 {
@@ -34,6 +38,7 @@ isFull (struct stack *ptr)
     }
 }
 
+//function to pust value on stack
 void
 push (struct stack *ptr, int val)
 {
@@ -48,6 +53,7 @@ push (struct stack *ptr, int val)
     }
 }
 
+//function to pop an element from stack
 void
 pop (struct stack *ptr, int val)
 {
@@ -77,19 +83,19 @@ main ()
   printf ("%d\n", isFull (s));
 
   push (s, 5);
-  push (s, 5);
-  push (s, 5);
-  push (s, 5);
-  push (s, 5);
+  push (s, 4);
+  push (s, 3);
+  push (s, 2);
+  push (s, 1);
   pop (s, 5);
-  pop (s, 5);
-  pop (s, 5);
-  pop (s, 5);
-  pop (s, 5);
-  pop (s, 5);
+  pop (s, 4);
+  pop (s, 3);
+  pop (s, 2);
+  pop (s, 1);
+  pop (s, 5);//it will print stack underflow
 
-  printf ("%d\n", isEmpty (s));
-  printf ("%d\n", isFull (s));
+  printf ("%d\n", isEmpty (s));//after push and pop cheking if string is empty or not
+  printf ("%d\n", isFull (s));//after push and pop cheking if string is full or not
 
   return 0;
 }
