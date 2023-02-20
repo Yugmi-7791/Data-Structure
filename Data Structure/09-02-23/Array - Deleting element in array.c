@@ -1,5 +1,8 @@
+//Program to delete an element of array
+
 #include <stdio.h>
 
+//code for traversal in array
 int
 traversal (int arr[], int n)
 {
@@ -9,6 +12,7 @@ traversal (int arr[], int n)
     }
 }
 
+//code to delete an element
 void
 del (int arr[], int size, int index)
 {
@@ -26,7 +30,7 @@ main ()
   int arr[100] = { 1, 2, 3, 4, 5 }, size = 5;
   int index = 2;
   traversal (arr, size);
-  del (arr, size, 2);
+  del (arr, size, 2);//deletion of element
   printf ("\n");
   size -= 1;
   traversal (arr, size);
