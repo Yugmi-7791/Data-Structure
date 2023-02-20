@@ -1,17 +1,21 @@
+//Program for Creation and traversal of linked list
+
 #include <stdio.h>
 #include <stdlib.h>
+
 struct node
 {
   int data;
   struct node *next;
 };
 
+//traversal in linked list
 void
 traversal (struct node *ptr)
 {
   while (ptr != NULL)
     {
-      printf ("%d ", ptr->data);
+      printf ("%d ", ptr->data);//printing elements in while loop
       ptr = ptr->next;
     }
 }
@@ -27,6 +31,7 @@ main ()
   second = (struct node *) malloc (sizeof (struct node));
   third = (struct node *) malloc (sizeof (struct node));
 
+  //assigning data to first,second and third node and linking each node to next node
   head->data = 7;
   head->next = second;
   second->data = 10;
