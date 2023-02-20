@@ -1,5 +1,8 @@
+//Program for traversal and insertion
+
 #include <stdio.h>
 
+//code for traversal in array
 int
 traversal (int arr[], int n)
 {
@@ -9,6 +12,7 @@ traversal (int arr[], int n)
     }
 }
 
+//code for insertion of element in an array
 int
 insertion (int arr[], int size, int element, int capacity, int index)
 {
