@@ -1,3 +1,5 @@
+//Program for searching element in Binary search tree
+
 #include <stdio.h>
 #include <stdlib.h>
 #include <malloc.h>
@@ -19,6 +21,7 @@ struct node * createnode(int data)
     return n;
 }
 
+//Function for Inorder traversal
 void inorder(struct node*root)
 {
     if(root!=NULL)
@@ -29,6 +32,7 @@ void inorder(struct node*root)
     }
 }
 
+//Function to check if tree is binary search tree or not
 int isbst(struct node*root)
 {
     static struct node*prev =NULL;
@@ -50,6 +54,7 @@ int isbst(struct node*root)
     }
 }
 
+//Function for searching an element in tree
 struct node * search(struct node* root, int key){
     if(root==NULL){
         return NULL;
