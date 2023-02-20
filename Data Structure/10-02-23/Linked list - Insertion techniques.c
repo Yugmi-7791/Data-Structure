@@ -1,3 +1,5 @@
+//Program to insert element in linked list
+
 #include <stdio.h>
 #include <stdlib.h>
 struct node
@@ -6,6 +8,7 @@ struct node
   struct node *next;
 };
 
+//traversal in linked list
 void
 traversal (struct node *ptr)
 {
@@ -16,6 +19,7 @@ traversal (struct node *ptr)
     }
 }
 
+//insertion of elements in linked list
 struct node *
 insertion (struct node *head, int data)
 {
@@ -25,6 +29,7 @@ insertion (struct node *head, int data)
   return ptr;
 }
 
+//insertion at index in linked list
 struct node *
 insertionatindex (struct node *head, int data, int index)
 {
@@ -42,6 +47,7 @@ insertionatindex (struct node *head, int data, int index)
   return head;
 }
 
+//insertion at end of linked list
 struct node *
 insertionatend (struct node *head, int data)
 {
@@ -57,6 +63,7 @@ insertionatend (struct node *head, int data)
   return head;
 }
 
+//insertion after node in linked list
 struct node *
 insertionafternode (struct node *head, struct node *prenode, int data)
 {
