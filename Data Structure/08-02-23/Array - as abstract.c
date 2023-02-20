@@ -1,6 +1,9 @@
+//Array as an abstract 
+
 #include <stdio.h>
 #include <stdlib.h>
 
+//Structure for array
 struct myarray
 {
   int total_size;
@@ -8,6 +11,7 @@ struct myarray
   int *ptr;
 };
 
+//Function to create an array of marks
 void
 creatarray (struct myarray *a, int tsize, int usize)
 {
@@ -16,6 +20,7 @@ creatarray (struct myarray *a, int tsize, int usize)
   a->ptr = (int *) malloc (tsize * sizeof (int));
 }
 
+//Function to show marks
 void
 show (struct myarray *a)
 {
@@ -25,6 +30,7 @@ show (struct myarray *a)
     }
 }
 
+//Function to print element
 void
 set (struct myarray *a)
 {
