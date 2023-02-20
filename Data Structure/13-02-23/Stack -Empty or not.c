@@ -1,3 +1,5 @@
+//Program to check if a stack is empty or not
+
 #include <stdio.h>
 #include <stdlib.h>
 
@@ -8,6 +10,7 @@ struct stack
   int *arr;
 };
 
+//function to find if stack is empty or not
 int
 isEmpty (struct stack *ptr)
 {
@@ -21,6 +24,7 @@ isEmpty (struct stack *ptr)
     }
 }
 
+//function to find if stack is full or not
 int
 isFull (struct stack *ptr)
 {
@@ -34,6 +38,7 @@ isFull (struct stack *ptr)
     }
 }
 
+//program will print empty
 int
 main ()
 {
