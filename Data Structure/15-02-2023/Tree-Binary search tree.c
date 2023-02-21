@@ -1,3 +1,5 @@
+// Program to impliment binary search tree.
+
 #include <stdio.h>
 #include <stdlib.h>
 #include <malloc.h>
@@ -9,6 +11,7 @@ struct node
     struct node*right;
 };
 
+//Creating node
 struct node * createnode(int data)
 {
     struct node * n;
@@ -19,6 +22,7 @@ struct node * createnode(int data)
     return n;
 }
 
+//Inorder taversal
 void inorder(struct node*root)
 {
     if(root!=NULL)
@@ -29,6 +33,7 @@ void inorder(struct node*root)
     }
 }
 
+//to check if tree is binary search tree or not
 int isbst(struct node*root)
 {
     static struct node*prev =NULL;
@@ -66,7 +71,7 @@ int main()
 
     inorder(p);
     printf("\n");
-    printf("%d",isbst(p));
+    printf("%d",isbst(p));//printing elements of tree
     printf("\n");
     return 0;
 }
