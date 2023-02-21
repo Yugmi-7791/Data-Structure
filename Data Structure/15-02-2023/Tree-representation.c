@@ -1,3 +1,5 @@
+//Program to represent a tree
+
 #include <stdio.h>
 #include <stdlib.h>
 #include <malloc.h>
@@ -5,17 +7,18 @@
 struct node 
 {
     int data;
-    struct node*left;
-    struct node*right;
+    struct node*left;//structuring left node
+    struct node*right;//structuring right node
 };
 
+//creating node
 struct node * createnode(int data)
 {
     struct node * n;
-    n=(struct node*)malloc(sizeof(struct node));
+    n=(struct node*)malloc(sizeof(struct node));//assigning size to n in heap using malloc
     n->data=data;
-    n->left=NULL;
-    n->right=NULL;
+    n->left=NULL;//initially n->left is made NULL
+    n->right=NULL;//initially n->right is made NULL
     return n;
 }
 
@@ -42,11 +45,13 @@ int main()
 
     p->left=p1;
     p->right=p2;*/
-
+    
+    //assigning values to nodes of tree
     struct node *p=createnode(2);
     struct node *p1=createnode(1);
     struct node *p2=createnode(4);
- 
+    
+    //declaring left and right nodes
     p->left=p1;
     p->right=p2;
 
