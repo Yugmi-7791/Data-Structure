@@ -1,15 +1,18 @@
+//Program to perform enqueue and dequeue on queue
+
 #include <stdio.h>
 #include <stdlib.h>
  
-struct Node *f = NULL;
-struct Node *r = NULL;
+struct Node *f = NULL;//declaration of first node
+struct Node *r = NULL;//declaration of rear node
  
 struct Node
 {
     int data;
     struct Node *next;
 };
- 
+
+//Traversal in queue
 void linkedListTraversal(struct Node *ptr)
 {
     printf("Printing the elements of this linked list\n");
@@ -19,7 +22,8 @@ void linkedListTraversal(struct Node *ptr)
         ptr = ptr->next;
     }
 }
- 
+
+//Code for enqueue in queue 
 void enqueue(int val)
 {
     struct Node *n = (struct Node *) malloc(sizeof(struct Node));
@@ -38,7 +42,8 @@ void enqueue(int val)
         }
     }
 }
- 
+
+//Code for dequeue in queue
 int dequeue()
 {
     int val = -1;
@@ -57,13 +62,13 @@ int dequeue()
 
 int main()
 {
-    linkedListTraversal(f);
-    printf("Dequeuing element %d\n", dequeue());
-    enqueue(34);
+    linkedListTraversal(f);//Queue traversal
+    printf("Dequeuing element %d\n", dequeue());//printing dequeuing element
+    enqueue(34);//adding element to queue
     enqueue(4);
     enqueue(7);
     enqueue(17);
-    printf("Dequeuing element %d\n", dequeue());
+    printf("Dequeuing element %d\n", dequeue());//dequeuing elements of queue
     printf("Dequeuing element %d\n", dequeue());
     printf("Dequeuing element %d\n", dequeue());
     printf("Dequeuing element %d\n", dequeue());
